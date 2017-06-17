@@ -10,6 +10,9 @@ import { MyEventBindingComponent } from './my-event-binding/my-event-binding.com
 import { MyMixedBindingComponent } from './my-mixed-binding/my-mixed-binding.component';
 import { MyTwoWayBindingComponent } from './my-two-way-binding/my-two-way-binding.component';
 import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component';
+import { CustomPipesComponent } from './custom-pipes/custom-pipes.component';
+import { CapitalizePipe } from './capitalize.pipe';
+import { NgForExampleComponent } from './ng-for-example/ng-for-example.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { BuiltInPipesComponent } from './built-in-pipes/built-in-pipes.component
     MyEventBindingComponent,
     MyMixedBindingComponent,
     MyTwoWayBindingComponent,
-    BuiltInPipesComponent
+    BuiltInPipesComponent,
+    CustomPipesComponent,
+    CapitalizePipe,
+    NgForExampleComponent
   ],
   imports: [
     BrowserModule,
