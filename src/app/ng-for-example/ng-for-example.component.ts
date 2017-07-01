@@ -3,11 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'ng-for-example',
   template: `
-    <ul>
-      <li *ngFor="let animal of animals, let i=index, let x = odd">
-        {{i}} - {{x}} - {{ animal.name}}
+  <ul>
+      <li *ngFor="let animal of animals; trackBy:trackByAnimalId">
+          <span>  {{ animal.name }} </span>
+          <small> {{ animal.category }} </small>
       </li>
-    </ul>
+  </ul>
     <p> ng-for-example Works! </p>
   `,
   styles: []
@@ -30,4 +31,7 @@ export class NgForExampleComponent {
       category: 'reptile',
       name: 'Snake'
   }];
+  trackByAnimalId(index: number, animal: any) {
+    return animal.id;
+}
 }

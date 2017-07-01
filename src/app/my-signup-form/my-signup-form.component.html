@@ -1,0 +1,14 @@
+
+<p>
+  my-signup-form works!
+</p>
+
+<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+  <p> Username
+    <input type="text" name="username" [(ngModel)]="username" required />
+  </p>
+  <p> Password
+    <input type="password" name="password" [(ngModel)]="password" required />
+  </p>
+  <button type="submit">Sign Up </button>
+</form>
